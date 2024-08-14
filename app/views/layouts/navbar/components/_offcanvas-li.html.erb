@@ -1,0 +1,9 @@
+<%# app/views/layouts/navbar/components/_offcanvas-li.html.erb %>
+
+<li class="navbar-item my-2">
+  <% if current_page?(action: action) %>
+    <span class="px-2 py-1 bg-1344darkpurple inline-block w-full rounded-lg select-none"><%= name %></span>
+  <% else %>
+    <%= link_to name, { action: action }, class: 'px-2 py-1 rounded-lg inline-block w-full duration-150 hover:bg-1344darkpurple'  %>
+  <% end %>
+</li>

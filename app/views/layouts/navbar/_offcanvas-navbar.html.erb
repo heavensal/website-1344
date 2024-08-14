@@ -1,0 +1,28 @@
+<%# menu off canva sur téléphone qui s'ouvre par la droite grace au button de menu %>
+
+<!-- Menu off-canvas -->
+<div id="menu" class="fixed top-0 right-0 transform translate-x-full h-full w-4/5 bg-gradient-to-br from-1344darkblue to-1344darkpurple shadow-md z-50 transition-transform duration-300" data-navbar--offcanvas-target="menu">
+
+  <div class="row-for-button text-right">
+    <%= render 'layouts/navbar/close-offcanvas-btn' %>
+  </div>
+
+
+  <ul class="p-4 text-white">
+
+    <%= render 'layouts/navbar/components/offcanvas-li', action: 'consulting', name: "Consulting" %>
+    <%= render 'layouts/navbar/components/offcanvas-li', action: 'web', name: "Application Web" %>
+    <%= render 'layouts/navbar/components/offcanvas-li', action: 'automation', name: "Automatisation" %>
+    <%= render 'layouts/navbar/components/offcanvas-li', action: 'marketing', name: "Marketing" %>
+    <%= render 'layouts/navbar/components/offcanvas-li', action: 'hosting', name: "Hébergement" %>
+
+  </ul>
+
+  <div class="my-8 flex justify-center" data-controller="dialog" data-action="click->dialog#backdropClose">
+    <%= render 'contacts/contact-action' %>
+  </div>
+
+</div>
+
+<%# Overlay noir pour cacher l'arrière plan quand le canva est ouvert %>
+<div id="overlay" class="hidden fixed inset-0 bg-black bg-opacity-50 z-40" data-navbar--offcanvas-target="overlay" data-action="click->navbar--offcanvas#close"></div>

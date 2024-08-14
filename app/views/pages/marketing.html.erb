@@ -1,0 +1,21 @@
+<main>
+  <div class="w-11/12 md:w-1/2 mx-auto h-screen flex flex-col justify-center" data-controller="scroll-reveal">
+
+    <div data-scroll-reveal-target="item" class="reveal">
+      <h1 class="text-4xl text-white text-center mb-6">
+        Avoir un site est une étape. <span class="bg-gradient-to-r from-1344blue to-1344purple inline-block text-transparent bg-clip-text">Être visible</span> est l'objectif final
+      </h1>
+    </div>
+
+    <div data-scroll-reveal-target="item" class="reveal" data-delay="250ms">
+      <p class="text-slate-300 text-center mb-6">
+        Optimisez votre référencement. Analysez le comportement de vos clients. Convertissez les à l'aide d'outils performants.
+      </p>
+    </div>
+
+    <div class="flex justify-center" data-controller="dialog" data-action="click->dialog#backdropClose">
+      <%= render 'contacts/contact-action' %>
+    </div>
+
+  </div>
+</main>

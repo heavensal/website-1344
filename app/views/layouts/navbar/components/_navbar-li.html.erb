@@ -1,0 +1,11 @@
+<%# app/views/layouts/navbar/components/_navbar-li.html.erb %>
+
+<li class="navbar-item">
+  <% if current_page?(action: action) %>
+    <span class="px-2 py-2 bg-1344darkpurple rounded-lg select-none">
+      <%= name %>
+    </span>
+  <% else %>
+    <%= link_to name, { action: action }, class: 'px-2 py-2 rounded-lg duration-150 hover:bg-1344darkpurple'  %>
+  <% end %>
+</li>
